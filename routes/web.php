@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::controller(AppointmentController::class)->group(function () {
-    Route::get('/schedule-visit', 'Index');
-    Route::get('/schedule-visit-thankyou', 'Thankyou');
+    Route::get('/schedule-visit', 'Index')->name('appoitnment-page');
+    Route::post('/schedule-visit-request', 'AppointmentRequest')->name('appoitnment');
+    Route::get('/schedule-visit-thankyou', 'Thankyou')->name('thankyou-page');
 });
