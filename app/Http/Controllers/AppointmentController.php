@@ -58,8 +58,13 @@ class AppointmentController extends Controller
         $headers = "From: noreply@brandnookcoworking.com" . "\r\n" .
         "Reply-To: ".$request->input('email');
 
-        mail($to,$subject,$txt,$headers);
-        return redirect()->route('schedule-visit-thankyou');
+        $sendEmail  = mail($to,$subject,$txt,$headers);
+        if(!$sendEmail){
+            return redirect()->route('appoitnment-page')
+                        ->withErrors(["Can't send email. Please try again"])
+                        ->withInput();
+        }
+        return redirect()->route('thankyou-page');
     }
     public function Thankyou(Request $request){
         $data = [];
