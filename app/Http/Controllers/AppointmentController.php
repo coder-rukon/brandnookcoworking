@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Storage;
 use Validator;
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 
 class AppointmentController extends Controller
@@ -19,15 +20,7 @@ class AppointmentController extends Controller
             'last_name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'company' => 'required',
-            'company_website' => 'required',
-            'company_address_line_1' => 'required',
-            'city' => 'required',
-            'state' => 'required',
-            'zip_code' => 'required',
-            'interested_in' => 'required',
-            'seats_needed' => 'required',
-            'desired_start_date' => 'required'
+           
         ]);
  
         if ($validator->fails()) {
@@ -58,6 +51,25 @@ class AppointmentController extends Controller
         $headers = "From: noreply@brandnookcoworking.com" . "\r\n" .
         "Reply-To: ".$request->input('email');
 
+        $Appointment = new Appointment();
+
+        $Appointment->first_name = $request->input('first_name');
+        $Appointment->last_name = $request->input('last_name');
+        $Appointment->email = $request->input('email');
+        $Appointment->phone = $request->input('phone');
+        $Appointment->company = $request->input('company');
+        $Appointment->company_website = $request->input('company_website');
+        $Appointment->company_address_line_1 = $request->input('company_address_line_1');
+        $Appointment->company_address_line_2 = $request->input('company_address_line_2');
+        $Appointment->city = $request->input('city');
+        $Appointment->state = $request->input('state');
+        $Appointment->zip_code = $request->input('zip_code');
+        $Appointment->interested_in = $request->input('interested_in');
+        $Appointment->seats_needed = $request->input('seats_needed');
+        $Appointment->desired_start_date = $request->input('desired_start_date');
+
+        $Appointment->save();
+
         $sendEmail  = mail($to,$subject,$txt,$headers);
         if(!$sendEmail){
             return redirect()->route('appoitnment-page')
@@ -65,6 +77,7 @@ class AppointmentController extends Controller
                         ->withInput();
         }
         return redirect()->route('thankyou-page');
+       
     }
     public function Thankyou(Request $request){
         $data = [];
