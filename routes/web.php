@@ -23,6 +23,6 @@ Route::controller(AppointmentController::class)->group(function () {
     Route::post('/schedule-visit-request', 'AppointmentRequest')->name('appoitnment');
     Route::get('/schedule-visit-thankyou', 'Thankyou')->name('thankyou-page');
 });
-Auth::routes();
+Auth::routes(['register'=>true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

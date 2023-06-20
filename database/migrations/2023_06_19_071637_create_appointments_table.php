@@ -15,20 +15,20 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('company');
-            $table->string('company_website');
-            $table->string('company_address_line_1');
-            $table->string('company_address_line_2');
-            $table->string('city');
-            $table->string('state');
-            $table->string('zip_code');
-            $table->string('interested_in');
-            $table->string('seats_needed');
-            $table->string('desired_start_date');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('company')->nullable();
+            $table->string('company_website')->nullable();
+            $table->string('company_address_line_1')->nullable();
+            $table->string('company_address_line_2')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('zip_code')->nullable();
+            $table->string('interested_in')->nullable();
+            $table->string('seats_needed')->nullable();
+            $table->string('desired_start_date')->nullable();
           
             $table->timestamps();
         });
