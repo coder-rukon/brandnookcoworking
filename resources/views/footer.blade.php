@@ -6,7 +6,7 @@
         <div class="row mobile_height">
             <div class="col-md-6">
                 <div class="as_footer_item footer_logo">
-                    <img src="images/header-logo.png" alt="Brandook">
+                    <a href="/"><img src="images/header-logo.png" alt="Brandook"></a>
 
                     <ul>
                         <li> <i class="fa fa-map-marker" aria-hidden="true"></i>

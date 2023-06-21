@@ -107,7 +107,7 @@ body.uc_page {
 }
 
 .appoitnment_page .form-group .form-control {
-    height: 40px;
+    height: 44px;
     border: 1px solid #231F20;
     border-radius: 4px;
     margin: 0;
@@ -117,7 +117,7 @@ body.uc_page {
 }
 
 .appoitnment_page .btn_submit {
-    height: 40px;
+    height: 44px;
     display: block;
     background: #231F20;
     color: #fff;
@@ -408,4 +408,78 @@ body.uc_page {
     font-size: 16px;
     font-weight: 400;
     vertical-align: revert-layer;
+}
+
+.home_page_container {
+    max-width: 700px!important;
+    margin: auto;
+}
+
+.home_body_background {
+    background-image: url(images/home_page_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home_page_design h1,
+.home_page_design h2,
+.home_page_design h3 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home_page_design h1 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.home_page_design h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: -13px;
+    margin-bottom: 52px;
+}
+
+.home_page_design .schedule_visite {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 7px;
+    font-weight: 400;
+}
+
+.home_page_design .form-group label {
+    color: #fff;
+}
+
+.home_hader {
+    background: #fff;
+}
+
+.home_page_design .btn_submit {
+    /* height: 40px; */
+    display: block;
+    background: #fff;
+    color: #000;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all .5s;
+}
+
+.home_page_design .btn_submit:hover {
+    color: #fff;
+    background: #000;
+}
+
+@media(max-width:660px) {
+    .home_page_design .schedule_visite {
+        font-size: 20px;
+    }
 }

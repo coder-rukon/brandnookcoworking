@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::controller(WelcomeController::class)->group(function () {
+    Route::get('/', 'welcome');
+    Route::post('/schedule-visit-request-home', 'home_apprement_request')->name('appoitnment-home');
 });
 
 Route::controller(AppointmentController::class)->group(function () {
+
     Route::get('/schedule-visit', 'Index')->name('appoitnment-page');
     Route::post('/schedule-visit-request', 'AppointmentRequest')->name('appoitnment');
     Route::get('/schedule-visit-thankyou', 'Thankyou')->name('thankyou-page');

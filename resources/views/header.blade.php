@@ -25,7 +25,7 @@
 <header id="header">
     <div class="container">
         <div class="logo_section">
-            <img src="/images/header-logo.png" class="logo" alt ="Brandnookcoworking.com"/>
+            <a href="/"><img src="/images/header-logo.png" class="logo" alt ="Brandnookcoworking.com"/></a>
         </div>
     </div>
 </header>

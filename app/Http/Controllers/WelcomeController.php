@@ -1,20 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Storage;
 use Validator;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 
-class AppointmentController extends Controller
+class WelcomeController extends Controller
 {
-    public function Index(Request $request){
+
+
+    public function welcome(Request $request){
         $data = [];
         $data['all_states'] = $this->getState(['US','CA']);
-        return view('Appointment',$data);
+        return view('welcome', $data);
     }
-    public function AppointmentRequest(Request $request){
+
+    private function getState( $country ) {
+        $states = Storage::disk( 'local' )->get( 'locations\states.json' );
+        $allStates = json_decode( $states );
+        $statesAr = [];
+        foreach ( $allStates as $stateKey => $state ) {
+            if ( in_array($state->country_code , $country) ) {
+                $statesAr[] = $state;
+            }
+        }
+       
+        return $statesAr;
+    }
+
+    public function home_apprement_request(Request $request){
         $validator = Validator::make($request->all(), [
             'first_name' => 'required',
             'last_name' => 'required',
@@ -24,7 +39,7 @@ class AppointmentController extends Controller
         ]);
  
         if ($validator->fails()) {
-            return redirect()->route('appoitnment-page')
+            return redirect('/')
                         ->withErrors($validator)
                         ->withInput();
         }
@@ -72,33 +87,13 @@ class AppointmentController extends Controller
 
         $sendEmail  = mail($to,$subject,$txt,$headers);
         if(!$sendEmail){
-                        return redirect()->route('appoitnment-page')
+                        return redirect('/')
                         ->withErrors(["Can't send email. Please try again"])
                         ->withInput();
         }
         return redirect()->route('thankyou-page');
        
     }
-    public function Thankyou(Request $request){
-        $data = [];
-        return view('Thankyou',$data);
-    }
 
-    public function welcome(Request $request){
-        $data = [];
-        $data['all_states'] = $this->getState(['US','CA']);
-        return view('welcome', $data);
-    }
-    private function getState( $country ) {
-        $states = Storage::disk( 'local' )->get( 'locations\states.json' );
-        $allStates = json_decode( $states );
-        $statesAr = [];
-        foreach ( $allStates as $stateKey => $state ) {
-            if ( in_array($state->country_code , $country) ) {
-                $statesAr[] = $state;
-            }
-        }
-       
-        return $statesAr;
-    }
-}
+
+} 
