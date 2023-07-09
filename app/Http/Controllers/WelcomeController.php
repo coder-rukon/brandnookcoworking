@@ -222,7 +222,7 @@ class WelcomeController extends Controller
 
         if ($validator->fails()) {
 
-            return redirect('/free-3-day-pass-to-brandnook')
+            return redirect('/3-day-pass')
 
                         ->withErrors($validator)
 
@@ -318,7 +318,7 @@ class WelcomeController extends Controller
 
         if(!$sendEmail){
 
-                        return redirect('/free-3-day-pass-to-brandnook')
+                        return redirect('/3-day-pass')
 
                         ->withErrors(["Can't send email. Please try again"])
 

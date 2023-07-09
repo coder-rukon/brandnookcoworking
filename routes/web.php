@@ -37,7 +37,7 @@ Route::controller(WelcomeController::class)->group(function () {
     Route::get('/', 'welcome');
     Route::post('/schedule-visit-request-home', 'home_apprement_request')->name('appoitnment-home');
 
-    Route::get('/free-3-day-pass-to-brandnook', 'free_3_day_pass');
+    Route::get('/3-day-pass', 'free_3_day_pass');
     Route::post('/free-3-day-pass-to-brandnook-request', 'free_3_day_pass_request')->name('free_3_day_pass_request');
 
 });
