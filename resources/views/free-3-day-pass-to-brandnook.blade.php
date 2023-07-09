@@ -3,7 +3,7 @@
 
 <div class="container aproment_main_section">
 
- <h2 class="schedule_visite">Schedule a Visit to Brandnook<sup>TM</sup></h2>
+ <h2 class="schedule_visite">Free 3-Day Pass to Brandnook<sup>TM</sup></h2>
 
      <div class="row">
 
@@ -12,10 +12,10 @@
              <div class="appoinment_page_container">
 
                 
-
+ 
                  <div class="ap_form">
 
-                     <form action="{{url()->route('appoitnment')}}" method="post">
+                     <form action="{{url()->route('free_3_day_pass_request')}}" method="post">
 
                          @csrf
 

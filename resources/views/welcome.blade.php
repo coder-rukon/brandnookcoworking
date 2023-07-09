@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-	<head>
+    <head>
 
         <meta charset="utf-8">
 
@@ -12,33 +12,30 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">        
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+       <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
 
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
         <link rel="stylesheet" type="text/css" href="/style.css">
 
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/Favicon_Brandnook.png" type="image/x-icon">
 
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/Favicon_Brandnook.png" type="image/x-icon">
 
-	</head>
-
-
+    </head>
 
 
 
@@ -54,7 +51,7 @@
 
 			<a href="/">
 
-            <img src="/images/brandnook_home.png" class="logo" alt ="Brandnookcoworking.com"/> </a>
+            <img src="/images/LogoBlack.png" class="logo" alt ="Brandnookcoworking.com"/> </a>
 
         </div>
 
@@ -212,11 +209,56 @@
 
 											<option value="">Please select</option>
 
-											@foreach ($all_states as $state)
-
-												<option>{{$state->name}}</option>
-
-											@endforeach
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 
 										</select>
 
@@ -242,7 +284,7 @@
 
 										<label>I'm Interested in</label>
 
-										<select name="interested_in"  class="form-control">
+										<select name="interested_in"  class="form-control" aria-label="Default select ">
 
 											<option value="">Please select</option>
 
@@ -312,11 +354,11 @@
 
         <div class="row mobile_height">
 
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <div class="as_footer_item footer_logo">
 
-                   <a href="/"> <img src="images/header-logo.png" alt="Brandook"></a>
+                   <a href="/"> <img src="images/LogoWhite.png" alt="Brandook"></a>
 
 
 
@@ -356,7 +398,7 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-4">
 
 
 
@@ -432,7 +474,7 @@
 
                 <div class="as_footer_item footer_logo footer_center ">
 
-                    <img src="images/header-logo.png" alt="Brandook"><br>
+                    <img src="images/LogoWhite.png" alt="Brandook"><br>
 
 
 

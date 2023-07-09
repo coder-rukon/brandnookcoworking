@@ -1,15 +1,20 @@
 
+
+
+
+
+
 <div id="footer_section">
 
     <div class="container">
 
         <div class="row mobile_height">
 
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <div class="as_footer_item footer_logo">
 
-                    <a href="/"><img src="images/header-logo.png" alt="Brandook"></a>
+                    <a href="/"><img src="images/LogoWhite.png" alt="Brandook"></a>
 
 
 
@@ -49,7 +54,7 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-4">
 
 
 
@@ -125,9 +130,7 @@
 
                 <div class="as_footer_item footer_logo footer_center ">
 
-                    <img src="images/header-logo.png" alt="Brandook"><br>
-
-
+                    <img src="images/LogoWhite.png" alt="Brandook"><br>
 
                     <ul class="mobile_aliment">
 

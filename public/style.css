@@ -100,7 +100,7 @@ body.uc_page {
 
 .appoitnment_page .form-group label {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     color: #231F20;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
@@ -148,29 +148,30 @@ body.uc_page {
 .thankyou_page .appoinment_page_container h2.title {
     display: block;
     text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .thankyou_page .appoinment_page_container h1.title {
     display: block;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 47px;
     line-height: 51px;
     margin: 14px 0;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .thankyou_page .appoinment_page_container p {
     display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     width: 440px;
     color: #231F20;
     margin: 0 auto;
     max-width: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
     margin-top: 30px;
 }
 
@@ -236,9 +237,9 @@ body.uc_page {
 
 .as_footer_item h2 {
     color: #fff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .as_footer_item ul {
@@ -332,6 +333,9 @@ body.uc_page {
     .mobile_show {
         display: block;
     }
+    .as_footer_item ul li br {
+        display: none;
+    }
     .mobile_height {
         display: none;
     }
@@ -352,7 +356,6 @@ body.uc_page {
     }
     .as_footer_item h2 {
         color: #fff;
-        font-family: 'Roboto', sans-serif;
         font-size: 26px;
         font-weight: 400;
     }
@@ -402,11 +405,13 @@ body.uc_page {
     font-size: 40px;
     text-align: center;
     margin-bottom: 39px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
 }
 
 .schedule_visite sup {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 10px;
+    font-weight: 300;
     vertical-align: revert-layer;
 }
 
@@ -426,28 +431,28 @@ body.uc_page {
 .home_page_design h2,
 .home_page_design h3 {
     color: #fff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 .home_page_design h1 {
-    font-size: 60px;
+    font-size: 100px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .home_page_design h3 {
     text-align: center;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 40px;
     margin-top: -13px;
     margin-bottom: 52px;
 }
 
 .home_page_design .schedule_visite {
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
     margin-bottom: 7px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .home_page_design .form-group label {
@@ -482,4 +487,12 @@ body.uc_page {
     .home_page_design .schedule_visite {
         font-size: 20px;
     }
+}
+
+select.form-control {
+    background-image: url(images/arrow-droupdown.png);
+    background-size: 10p;
+    background-size: 6px;
+    background-repeat: no-repeat;
+    background-position: 96% 50%;
 }
